@@ -7,6 +7,12 @@
   --main-white: #fff;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-size: 14px;
 }
@@ -15,10 +21,16 @@ body {
   font-family: 'Old Standard TT', serif;
   background: var(--main-white);
   color: var(--main-dark);
+  margin: 0;
+  padding: 0;
 }
 
 body *:focus {
   outline: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media (min-width: 992px) {
