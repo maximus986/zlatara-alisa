@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700&display=swap&subset=latin-ext');
+
+:root {
+  --main-color: #d6a533;
+  --secondary-color: #bd9d53;
+  --main-dark: #333;
+  --main-white: #fff;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: 'Old Standard TT', serif;
+  background: var(--main-white);
+  color: var(--main-dark);
+}
+
+body *:focus {
+  outline: none;
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 16px;
+  }
+}
