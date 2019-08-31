@@ -10,47 +10,38 @@ import Container from '../styled-components/Container';
 const Header = ({ className }) => {
   return(
     <header className={className}>
-      <div className="header-top">
-        <Container>
-          <div className="info">
-            <p className="info-item">Radno vreme: 09:00 - 17:00</p>
-            <p className="info-item">Kontakt: 011/2754-118, 064/668-7634</p>
-            <p className="info-item">Adresa: Ruzveltova 37, Beograd</p>
-          </div>
-        </Container>
-      </div>
       <div className="main-header-wrapper">
-      <Container>
-      <div className="main-header">
-        <AniLink fade to="/">
-          <img src={logo} alt="Logo"/>
-        </AniLink>
-        <button type="button" className="toggle-btn">
-            <FaAlignRight className="toggle-btn__icon" />
-          </button>
-        <nav className="navbar">
-          <ul className="main-nav">
-            {
-              links.map((link, index) => {
-                return (
-                  <li key={index} className="main-nav__item">
-                    <AniLink fade to={link.path} className="main-nav__link">{link.text}</AniLink>
-                  </li>
-                )
-              })
-            }
-          </ul>
-        </nav>
-        <div className="social-icons">
-            {
-              socialLinks.map((link, index) => {
-                return (
-                  <a key={index} href={link.url} className="social-link" target="_blank">{link.icon}</a>
-                )
-              })
-            }
-        </div>
-      </div>
+        <Container>
+          <div className="main-header">
+            <AniLink fade to="/" className="logo-link">
+              <img src={logo} alt="Logo" className="logo" />
+            </AniLink>
+            <button type="button" className="toggle-btn">
+                <FaAlignRight className="toggle-btn__icon" />
+              </button>
+            <nav className="navbar">
+              <ul className="main-nav">
+                {
+                  links.map((link, index) => {
+                    return (
+                      <li key={index} className="main-nav__item">
+                        <AniLink fade to={link.path} className="main-nav__link">{link.text}</AniLink>
+                      </li>
+                    )
+                  })
+                }
+              </ul>
+            </nav>
+            <div className="social-icons">
+                {
+                  socialLinks.map((link, index) => {
+                    return (
+                      <a key={index} href={link.url} className="social-link" target="_blank">{link.icon}</a>
+                    )
+                  })
+                }
+            </div>
+          </div>
         </Container>
       </div>
     </header>
@@ -58,27 +49,18 @@ const Header = ({ className }) => {
 }
 
 export default styled(Header)`
-  .header-top {
-    padding: 5px 0;
-    background: var(--secondary-color);
-    .info {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      &-item {
-       font-size: 0.8rem;
-      }
-    }
-  }
   .main-header-wrapper {
     padding: 15px 0;
-    background: var(--main-dark);
     .main-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      .logo {
-
+      .logo-link {
+        width: 130px;
+          .logo {
+            width: 100%;
+          }
+        }
       }
        .toggle-btn {
         display: none;
@@ -94,8 +76,21 @@ export default styled(Header)`
         }
         &__link {
           color: var(--main-color);
+          font-family: 'Cabin', sans-serif;
           text-transform: capitalize;
           letter-spacing: 3px;
+        }
+      }
+    }
+    .social-icons {
+      display: flex;
+      align-items: center;
+      margin-top: 8px;
+      .social-link {
+        color: var(--main-color);
+        font-size: 1.5rem;
+        &:not(:last-of-type) {
+          margin-right: 1.5rem;
         }
       }
     }
