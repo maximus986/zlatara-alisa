@@ -2,7 +2,7 @@ import React from 'react';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import links from '../static-data/links';
 import socialLinks from '../static-data/social-links';
-import logo from "../images/logo.png"
+import logo from "../images/logo.svg"
 import styled from 'styled-components';
 import { FaAlignRight } from "react-icons/fa";
 import Container from '../styled-components/Container';
