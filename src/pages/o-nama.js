@@ -1,10 +1,13 @@
 import React from 'react';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const oNama = () => {
   return (
-    <div>
+    <Layout>
+      <SEO title="O nama" />
       Hello from o nama
-    </div>
+    </Layout>
 );
 }
 

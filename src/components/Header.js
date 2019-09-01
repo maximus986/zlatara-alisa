@@ -4,11 +4,8 @@ import links from '../static-data/links';
 import socialLinks from '../static-data/social-links';
 import logo from '../images/logo.svg';
 import styled from 'styled-components';
-import { FaAlignRight } from "react-icons/fa";
 import { IoIosClose, IoIosMenu } from 'react-icons/io';
 import { MdFormatAlignRight } from 'react-icons/md';
-
-
 
 const Header = ({ className }) => {
  const [isOpen, setNav] = useState(false)
@@ -35,7 +32,7 @@ const Header = ({ className }) => {
             links.map((link, index) => {
               return (
                 <li key={index} className="main-nav__item">
-                  <AniLink fade to={link.path} className="main-nav__link">{link.text}</AniLink>
+                  <AniLink fade to={link.path} className="main-nav__link" activeClassName="active">{link.text}</AniLink>
                 </li>
               );
             })
@@ -70,10 +67,22 @@ export default styled(Header)`
   position: relative;
   z-index: 1040;
   @media(min-width: 576px) {
-    padding: 0 60px;
+    padding: 15px 60px;
+  }
+  @media(min-width: 992px) {
+    padding: 15px 100px;
   }
   .logo {
     width: 100px;
+    @media(min-width: 992px) {
+      width: 120px;
+    }
+    @media(min-width: 1200px) {
+      width: 140px;
+    }
+    @media(min-width: 1600px) {
+      width: 150px;
+    }
     &-icon {
       width: 100%;
     }
@@ -97,6 +106,7 @@ export default styled(Header)`
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-grow: 1;
     }
     &-header {
       display: flex;
@@ -134,12 +144,28 @@ export default styled(Header)`
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        margin-left: auto;
       }
       &__item {
         display: block;
         text-align: center;
         @media(min-width: 768px) {
           display: inline-block;
+          &:not(:last-of-type) {
+            margin-right: 20px;
+          }
+        }
+        @media(min-width: 1200px) {
+          display: inline-block;
+          &:not(:last-of-type) {
+            margin-right: 40px;
+          }
+        }
+        @media(min-width: 1600px) {
+          display: inline-block;
+          &:not(:last-of-type) {
+            margin-right: 50px;
+          }
         }
       }
       &__link {
@@ -150,17 +176,19 @@ export default styled(Header)`
         text-transform: uppercase;
         padding: 15px 0;
         display: block;
-        transition: 0.3s ease-in;
-        &:hover {
+        transition: 0.3s linear;
+        &:hover,
+        &.active {
           color: var(--main-white);
         }
+
         @media(min-width: 768px) {
           font-size: 1rem;
-          letter-spacing: 0;
           text-transform: capitalize;
           padding: 15px 0;
           display: inline-block;
-          &:hover {
+          &:hover,
+          &.active {
             color: var(--main-dark);
           }
         }
@@ -171,20 +199,22 @@ export default styled(Header)`
       justify-content: center;
       align-items: center;
       @media(min-width: 768px) {
-        margin-top: 6px;
+        margin-top: 8px;
+        margin-left: auto;
       }
       .social-link {
         color: var(--main-color);
         font-size: 2rem;
         cursor: pointer;
+        transition: 0.3s linear;
         &:not(:last-of-type) {
           margin-right: 20px;
-          transition: 0.3s ease-in;
         }
         &:hover {
           color: var(--main-white);
         }
         @media(min-width: 768px) {
+          font-size: 1.5rem;
           &:hover {
             color: var(--main-dark);
           }
