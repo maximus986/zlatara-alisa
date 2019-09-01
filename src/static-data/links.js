@@ -1,7 +1,7 @@
 export default [
   {
     path: "/",
-    text: "pocetna",
+    text: "početna",
   },
   {
     path: "/o-nama",
@@ -18,5 +18,5 @@ export default [
   {
     path: "/kontakt",
     text: "kontakt",
-  },
+  }
 ]
