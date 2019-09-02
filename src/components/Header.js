@@ -91,16 +91,15 @@ export default styled(Header)`
     position: absolute;
     top: 0;
     left: -100%;
-    background: var(--main-dark);
+    background: var(--main-white);
     width: 100vw;
     height: 100vh;
     padding: 15px 0;
-    transition: 0.5s linear;
+    transition: 0.3s linear;
      @media(min-width: 768px) {
       position: static;
       top: auto;
       left: auto;
-      background: var(--main-white);
       width: auto;
       height: auto;
       display: flex;
@@ -170,9 +169,9 @@ export default styled(Header)`
       }
       &__link {
         color: var(--main-color);
-        font-family: 'Cabin', sans-serif;
-        font-size: 1.3rem;
-        letter-spacing: 2px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.4rem;
+        letter-spacing: 3px;
         text-transform: uppercase;
         padding: 15px 0;
         display: block;
@@ -192,6 +191,9 @@ export default styled(Header)`
             color: var(--main-dark);
           }
         }
+        @media(min-width: 1200px) {
+          font-size: 1.1rem;
+        }
       }
     }
     .social-icons {
@@ -199,7 +201,7 @@ export default styled(Header)`
       justify-content: center;
       align-items: center;
       @media(min-width: 768px) {
-        margin-top: 8px;
+        margin-top: 7px;
         margin-left: auto;
       }
       .social-link {
@@ -218,6 +220,9 @@ export default styled(Header)`
           &:hover {
             color: var(--main-dark);
           }
+        }
+        @media(min-width: 1200px) {
+          font-size: 2rem;
         }
       }
     }

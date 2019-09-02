@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,700|Crimson+Text:400,700|Lateef&display=swap&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,700|Lateef|Raleway:300,400,500,700&display=swap&subset=latin-ext');
+
 /* font-family: 'Cabin', sans-serif;
 font-family: 'Lateef', cursive;
 font-family: 'Crimson Text', serif; */
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
 
 
 :root {
