@@ -4,7 +4,7 @@ import links from '../static-data/links';
 import socialLinks from '../static-data/social-links';
 import logo from '../images/logo.svg';
 import styled from 'styled-components';
-import { IoIosClose, IoIosMenu } from 'react-icons/io';
+import { IoIosClose } from 'react-icons/io';
 import { MdFormatAlignRight } from 'react-icons/md';
 
 const Header = ({ className }) => {
