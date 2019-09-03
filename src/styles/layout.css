@@ -46,7 +46,18 @@ h1, h2,h3,h4,h5,h6 {
   font-family: 'Lateef', cursive;
 }
 
-.tl-edges {
-  overflow: visible;
+
+@media only screen and (max-width: 600px) {
+ .tl-edges {
+    overflow: visible;
+  }
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: rgba(var(--main-color), 0.7)
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}

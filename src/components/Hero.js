@@ -11,10 +11,12 @@ const Hero = ({ img, className, children, home }) => {
 }
 
 export default styled(Hero)`
-  background: ${props => props.home ? 'linear-gradient(rgba(212, 195, 109, 0.4), rgba(0, 0, 0, 0.7))' : 'none'};
+  min-height: ${props => {
+    return props.home ? '70vh': '60vh'}
+    };
+  background: ${props => props.home ? 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7))' : 'none'};
   background-position: center;
   background-size: cover;
-  height: ${props => props.home ? '100vh': '60vh'};
   opacity: 1 !important;
   display: flex;
   align-items: center;

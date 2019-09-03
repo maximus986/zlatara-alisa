@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import {Link} from 'gatsby';
 import links from '../static-data/links';
 import socialLinks from '../static-data/social-links';
 import logo from '../images/logo.svg';

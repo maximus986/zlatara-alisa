@@ -8,7 +8,7 @@ const kontakt = ({data}) => {
   return (
     <Layout>
       <SEO title="Kontakt" />
-      <Hero home="" img={data.defaultBg.childImageSharp.fluid}/>
+      <Hero home="true" img={data.contactBg.childImageSharp.fluid}/>
     </Layout>
   );
 }
@@ -16,11 +16,11 @@ const kontakt = ({data}) => {
 export default kontakt;
 
 export const query = graphql`
-  {
-  defaultBg: file(relativePath: {eq: "bg-2.jpg"}) {
+{
+  contactBg: file(relativePath: {eq: "bg-1.jpg"}) {
     childImageSharp {
       fluid(maxWidth: 4160, quality:90) {
-        ...GatsbyImageSharpFluid_tracedSVG
+        ...GatsbyImageSharpFluid
       }
     }
   }
