@@ -3,11 +3,27 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Hero from '../components/Hero';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+ const settings = {
+  autoplay: true,
+  autoplaySpeed: 4000,
+  infinite: true,
+  speed: 700,
+  fade: true,
+  cssEase: 'linear'
+};
 
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Početna" />
-    <Hero home="true" img={data.defaultBg.childImageSharp.fluid}/>
+    <Slider {...settings}>
+      <Hero home="true" img={data.defaultBg.childImageSharp.fluid}/>
+      <Hero home="true" img={data.defaultBg.childImageSharp.fluid}/>
+      <Hero home="true" img={data.defaultBg.childImageSharp.fluid}/>
+    </Slider>
   </Layout>
 
 )

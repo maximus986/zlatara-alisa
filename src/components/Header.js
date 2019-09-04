@@ -229,7 +229,7 @@ export default styled(Header)`
     }
   }
   .show {
-    left: 0;
+    transform: translateX(100%);
   }
   .nav-toggler {
     border: none;
