@@ -179,7 +179,7 @@ export default styled(Header)`
         transition: 0.3s linear;
         &:hover,
         &.active {
-          color: var(--main-white);
+          color: var(--main-dark);
         }
 
         @media(min-width: 768px) {
@@ -187,10 +187,7 @@ export default styled(Header)`
           text-transform: capitalize;
           padding: 15px 0;
           display: inline-block;
-          &:hover,
-          &.active {
-            color: var(--main-dark);
-          }
+          &:hover
         }
         @media(min-width: 1200px) {
           font-size: 1.1rem;
