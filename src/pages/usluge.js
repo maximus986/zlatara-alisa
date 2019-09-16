@@ -8,7 +8,7 @@ const usluge = ({data}) => {
   return (
     <Layout>
       <SEO title="Usluge" />
-      <Hero home="true" img={data.servicesBg.childImageSharp.fluid}/>
+      <Hero img={data.servicesBg.childImageSharp.fluid}/>
     </Layout>
 
   );
@@ -17,7 +17,7 @@ const usluge = ({data}) => {
 export default usluge;
 export const query = graphql`
 {
-  servicesBg: file(relativePath: {eq: "bg-3.jpg"}) {
+  servicesBg: file(relativePath: {eq: "bg-33.jpg"}) {
     childImageSharp {
       fluid(maxWidth: 4160, quality:90) {
         ...GatsbyImageSharpFluid

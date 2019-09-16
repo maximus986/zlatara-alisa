@@ -8,7 +8,7 @@ export default function proizvodi({data}) {
   return (
     <Layout>
       <SEO title="Proizvodi" />
-      <Hero home="true" img={data.productsBg.childImageSharp.fluid}/>
+      <Hero img={data.productsBg.childImageSharp.fluid}/>
     </Layout>
 
   )
@@ -16,7 +16,7 @@ export default function proizvodi({data}) {
 
 export const query = graphql`
 {
-  productsBg: file(relativePath: {eq: "bg-6.jpg"}) {
+  productsBg: file(relativePath: {eq: "bg-22.jpg"}) {
     childImageSharp {
       fluid(maxWidth: 4160, quality:90) {
         ...GatsbyImageSharpFluid

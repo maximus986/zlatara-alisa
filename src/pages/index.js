@@ -9,32 +9,38 @@ import "slick-carousel/slick/slick-theme.css";
 
  const settings = {
   autoplay: true,
-  autoplaySpeed: 4000,
+  autoplaySpeed: 5000,
   infinite: true,
-  speed: 700,
+  speed: 1000,
   fade: true,
-  cssEase: 'linear'
+  cssEase: 'linear',
+  pauseOnHover: false
 };
 
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Početna" />
     <Slider {...settings}>
-      <Hero home="true" img={data.defaultBg.childImageSharp.fluid}/>
-      <Hero home="true" img={data.defaultBg.childImageSharp.fluid}/>
-      <Hero home="true" img={data.defaultBg.childImageSharp.fluid}/>
+    {
+      data.allFile.edges.map(({ node }, index) => {
+        return <Hero home="true" img={node.childImageSharp.fluid} key={index} />
+      })
+    }
     </Slider>
   </Layout>
-
 )
 export default IndexPage
 
 export const query = graphql`
 {
-  defaultBg: file(relativePath: {eq: "bg-4.jpg"}) {
-    childImageSharp {
-      fluid(maxWidth: 4160, quality:90) {
-        ...GatsbyImageSharpFluid
+  allFile(filter: {relativeDirectory: {eq: "Slider-images"}}) {
+    edges {
+      node {
+        childImageSharp {
+          fluid(maxWidth: 4160, quality: 90) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
     }
   }

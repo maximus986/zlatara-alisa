@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
-import {Link} from 'gatsby';
 import links from '../static-data/links';
 import socialLinks from '../static-data/social-links';
 import logo from '../images/logo.svg';
@@ -211,13 +210,10 @@ export default styled(Header)`
           margin-right: 20px;
         }
         &:hover {
-          color: var(--main-white);
+          color: var(--main-dark);
         }
         @media(min-width: 768px) {
           font-size: 1.5rem;
-          &:hover {
-            color: var(--main-dark);
-          }
         }
         @media(min-width: 1200px) {
           font-size: 2rem;
