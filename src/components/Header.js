@@ -60,17 +60,17 @@ const Header = ({ className }) => {
 
 export default styled(Header)`
 .header-wrapper {
-  padding: 15px;
+  padding: 2px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
   z-index: 1040;
   @media(min-width: 576px) {
-    padding: 15px 60px;
+    padding: 4px 60px;
   }
   @media(min-width: 992px) {
-    padding: 15px 100px;
+    padding: 4px 100px;
   }
   .logo {
     width: 100px;
@@ -130,7 +130,6 @@ export default styled(Header)`
     .main-nav {
       list-style: none;
       padding: 0 15px;
-      list-style: none;
       height: 60vh;
       display: flex;
       flex-direction: column;
@@ -213,7 +212,7 @@ export default styled(Header)`
           color: var(--main-dark);
         }
         @media(min-width: 768px) {
-          font-size: 1.5rem;
+          font-size: 1.8rem;
         }
         @media(min-width: 1200px) {
           font-size: 2rem;
