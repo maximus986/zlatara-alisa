@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Hero from '../components/Hero';
 import Slider from "react-slick";
+import ProductsTeaser from '../components/Products-teaser';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -27,6 +28,7 @@ const IndexPage = ({data}) => (
       })
     }
     </Slider>
+    <ProductsTeaser />
   </Layout>
 )
 export default IndexPage

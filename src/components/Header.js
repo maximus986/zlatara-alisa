@@ -94,7 +94,7 @@ export default styled(Header)`
     background: var(--main-white);
     width: 100vw;
     height: 100vh;
-    padding: 15px 0;
+    padding: 2px 0;
     transition: 0.3s linear;
      @media(min-width: 768px) {
       position: static;
