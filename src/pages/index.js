@@ -15,7 +15,9 @@ import "slick-carousel/slick/slick-theme.css";
   speed: 1000,
   fade: true,
   cssEase: 'linear',
-  pauseOnHover: false
+  pauseOnHover: false,
+  arrows: false,
+
 };
 
 const IndexPage = ({data}) => (
