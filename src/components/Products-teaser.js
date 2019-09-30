@@ -7,14 +7,29 @@ import Container from '../styled-components/Container'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
+
+const SlickButtonFix = ({currentSlide, slideCount, children, ...props}) => (
+    <span {...props}>{children}</span>
+);
 
 const settings = {
   speed: 300,
   slidesToShow: 4,
   slidesToScroll: 1,
-  infinite: true,
   autoplay: true,
   infinite: true,
+  prevArrow: (
+    <SlickButtonFix>
+      <IoIosArrowBack />
+    </SlickButtonFix>
+  ),
+  nextArrow: (
+    <SlickButtonFix>
+      <IoIosArrowForward />
+    </SlickButtonFix>
+  ),
   responsive: [
      {
       breakpoint: 576,
@@ -63,6 +78,7 @@ const ProductsTeaser = ({className}) => {
           contentful_id
           title
           description
+          slug
           image {
             fluid {
               ...GatsbyContentfulFluid
@@ -84,7 +100,7 @@ const ProductsTeaser = ({className}) => {
           <Slider {...settings}>
           {
             products.map(product => {
-              return <Product product={product.node} key={product.contentful_id}/>
+              return <Product product={product.node} key={product.node.contentful_id}/>
             })
           }
           </Slider >
@@ -98,6 +114,45 @@ export default styled(ProductsTeaser)`
   .products-teaser {
     padding: 30px 0;
     text-align: center;
+    .slick-arrow {
+      font-size: 1.6rem;
+      line-height: 46px;
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      height: 40px;
+      color: rgba(51, 51, 51, 0.7);
+      border-radius: 50%;
+      text-align: center;
+      background: rgba(212, 195, 109, 0.7);
+      &:before {
+        display: none;
+      }
+    }
+    .slick-prev {
+      left: -9px;
+      @media (min-width: 576px) {
+        left: -20px;
+      }
+      @media (min-width: 768px) {
+        left: -18px;
+      }
+      @media (min-width: 1200px) {
+        left: -16px;
+      }
+    }
+    .slick-next {
+      right: -9px;
+      @media (min-width: 576px) {
+        right: -20px;
+      }
+      @media (min-width: 768px) {
+        right: -18px;
+      }
+      @media (min-width: 1200px) {
+        right: -16px;
+      }
+    }
   }
 `;
 

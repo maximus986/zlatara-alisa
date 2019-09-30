@@ -4,11 +4,10 @@ import Img from 'gatsby-image';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const Product = ({product, className}) => {
-  console.log(product);
   return (
     <div className={className}>
     <article className="product">
-      <AniLink fade to="/" className="product-link">
+      <AniLink fade to={`/${product.slug}`} className="product-link">
         <h5 className="product-title">
           {product.title}
         </h5>
@@ -28,7 +27,7 @@ const Product = ({product, className}) => {
 export default styled(Product)`
   .product {
     width: 260px;
-    min-height: 480px;
+    min-height: 450px;
     margin: 0 auto;
     padding: 30px 15px;
     border: 1px solid var(--main-color);
