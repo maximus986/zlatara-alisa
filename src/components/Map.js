@@ -7,6 +7,7 @@ import {
   import MapStyles from '../static-data/mapStyles';
   import styles from '../styles/contact.module.css';
 
+
 export default class Map extends Component {
   render() {
     const GoogleMapZA = withScriptjs(withGoogleMap(props => (
@@ -19,6 +20,7 @@ export default class Map extends Component {
         </GoogleMap>
     )))
     return (
+      // Add GATSBY_ to env before push. Also in env files
       <GoogleMapZA
         googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.GATSBY_GOOGLE_API_KEY}&v=3.exp&libraries=geometry,drawing,places`}
         loadingElement={<div style={{ height: `100%` }} />}
