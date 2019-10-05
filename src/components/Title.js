@@ -20,13 +20,13 @@ export default styled(Title)`
   padding-bottom: 15px;
   margin-bottom: 40px;
   color: var(--main-dark);
-  &:after {
-    content: "";
-    width: 60px;
-    height: 1px;
-    display: block;
-    background: var(--main-color);
-    margin: 15px auto 0;
+    &:after {
+      content: "";
+      width: 60px;
+      height: 1px;
+      display: block;
+      background: var(--main-color);
+      margin: 15px auto 0;
+    }
   }
-}
 `;
