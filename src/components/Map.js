@@ -20,7 +20,7 @@ export default class Map extends Component {
     )))
     return (
       <GoogleMapZA
-        googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyC7GcBrDwlgCsqVN3QXKr1GaAw9HfDk8Ls&v=3.exp&libraries=geometry,drawing,places`}
+        googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.GATSBY_GOOGLE_API_KEY}&v=3.exp&libraries=geometry,drawing,places`}
         loadingElement={<div style={{ height: `100%` }} />}
         containerElement={ <div style={{ height: `500px`, width: '100%' }} className={styles.map}/> }
         mapElement={ <div style={{ height: `100%` }} /> }
