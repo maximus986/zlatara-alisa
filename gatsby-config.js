@@ -41,6 +41,14 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    `gatsby-plugin-playground`
+    `gatsby-plugin-playground`,
+    {
+      resolve: `gatsby-plugin-breadcrumb`,
+      options: {
+        useAutoGen: true,
+        autoGenHomeLabel: `Početna`,
+        useClassNames: true
+      },
+    },
   ]
 }

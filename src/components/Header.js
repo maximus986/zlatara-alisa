@@ -66,7 +66,7 @@ export default styled(Header)`
   justify-content: space-between;
   position: relative;
   z-index: 1040;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 2px 8px 0px rgba(51,51,51,0.38);
   @media(min-width: 576px) {
     padding: 7px 33px;
   }
