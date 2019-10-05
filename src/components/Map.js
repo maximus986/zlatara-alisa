@@ -7,7 +7,6 @@ import {
   import MapStyles from '../static-data/mapStyles';
   import styles from '../styles/contact.module.css';
 
-  console.log(process.env.GOOGLE_API_KEY);
 export default class Map extends Component {
   render() {
     const GoogleMapZA = withScriptjs(withGoogleMap(props => (
