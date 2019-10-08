@@ -99,7 +99,7 @@ const ProductsTeaser = ({className}) => {
         <Title title="najnovije" />
           <Slider {...settings}>
           {
-            products.map(product => {
+            products.map((product, key) => {
               return <Product product={product.node} key={product.node.contentful_id}/>
             })
           }
