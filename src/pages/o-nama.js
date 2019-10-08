@@ -16,7 +16,7 @@ const oNama = ({data}) => {
 export default oNama;
 export const query = graphql`
 {
-  aboutBg: file(relativePath: {eq: "bg-11.jpg"}) {
+  aboutBg: file(relativePath: {eq: "bg-11.webp"}) {
     childImageSharp {
       fluid(maxWidth: 4160, quality:90) {
         ...GatsbyImageSharpFluid

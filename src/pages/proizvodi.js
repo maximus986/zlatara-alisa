@@ -43,7 +43,7 @@ query {
       }
     }
   }
-  productsBg: file(relativePath: { eq: "bg-22.jpg" }) {
+  productsBg: file(relativePath: { eq: "bg-22.webp" }) {
     childImageSharp {
       fluid(maxWidth: 4160, quality: 90) {
         ...GatsbyImageSharpFluid

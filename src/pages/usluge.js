@@ -17,7 +17,7 @@ const usluge = ({data}) => {
 export default usluge;
 export const query = graphql`
 {
-  servicesBg: file(relativePath: {eq: "bg-33.jpg"}) {
+  servicesBg: file(relativePath: {eq: "bg-33.webp"}) {
     childImageSharp {
       fluid(maxWidth: 4160, quality:90) {
         ...GatsbyImageSharpFluid
