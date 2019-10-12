@@ -73,6 +73,9 @@ export default styled(Header)`
   @media(min-width: 992px) {
     padding: 4px 100px;
   }
+  @media(min-width: 1600px) {
+    padding: 4px 160px;
+  }
   .logo {
     width: 100px;
     @media(min-width: 992px) {
