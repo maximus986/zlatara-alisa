@@ -66,7 +66,7 @@ export default styled(burme)`
         justify-content: space-between;
       }
       @media (min-width: 1200px) {
-        flex-basis: 74%;
+        flex-basis: 70%;
       }
       .product {
         flex-basis: 100%;

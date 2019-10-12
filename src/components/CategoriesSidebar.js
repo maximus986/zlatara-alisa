@@ -50,13 +50,13 @@ const CategoriesSidebar = ({className}) => {
 
 export default styled(CategoriesSidebar)`
   .sidebar {
-    padding-top: 10px;
     border: 1px solid var(--main-color);
     text-align: center;
+    box-shadow: 0px 1px 6px 1px #ccc;
     &-title {
       font-size: 1.5rem;
-      font-weight: 300;
-      margin-bottom: 20px;
+      font-weight: 400;
+      padding: 20px 0;
     }
     &-list {
       list-style: none;
@@ -74,7 +74,7 @@ export default styled(CategoriesSidebar)`
           transition: 0.3s linear;
           &:hover,
           &.active {
-            background: var(--main-color);
+            background: rgba(212,195,109,0.3);;
             color: var(--main-white);
           }
           /* .sidebar-img-wrapper {
