@@ -12,7 +12,9 @@ const productTemplate = ({ data, className, pageContext: {
     breadcrumb: { crumbs },
   }}) => {
 
-  const { title, description, image } = data.product;
+  const { title, description, image, category } = data.product;
+  console.log(category);
+
   return (
     <div className={className}>
       <Layout >
@@ -36,7 +38,7 @@ const productTemplate = ({ data, className, pageContext: {
           </div>
           </Container>
         </section>
-        <ProductTeaser />
+        <ProductTeaser relatedProduct={category} />
       </Layout>
     </div>
   );
@@ -144,6 +146,7 @@ export const query = graphql`
   product: contentfulProduct(slug: { eq: $slug }) {
     title
     description
+    category
     image {
       fluid {
         ...GatsbyContentfulFluid

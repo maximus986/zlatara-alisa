@@ -69,7 +69,10 @@ const settings = {
   ]
 };
 
-const ProductsTeaser = ({className}) => {
+const ProductsTeaser = ({relatedProduct, className}) => {
+  if(!relatedProduct) {
+    return null;
+  }
   const data = graphql`
   {
     products: allContentfulProduct(filter: { node_locale: { eq: "en-US" } }) {
@@ -78,6 +81,7 @@ const ProductsTeaser = ({className}) => {
           contentful_id
           title
           description
+          category
           slug
           image {
             fluid {
@@ -91,15 +95,18 @@ const ProductsTeaser = ({className}) => {
   `;
   const response = useStaticQuery(data);
   const products = response.products.edges;
+  const filteredProducts = products.filter(product => {
+    return product.node.category == relatedProduct;
+  })
 
   return (
     <div className={className}>
       <section className="products-teaser">
       <Container>
-        <Title title="najnovije" />
+        <Title title="slični proizvodi" />
           <Slider {...settings}>
           {
-            products.map((product) => {
+            filteredProducts.map((product) => {
               return <Product product={product.node} key={product.node.contentful_id}/>
             })
           }
