@@ -66,6 +66,9 @@ export default styled(prstenje)`
         justify-content: space-between;
       }
       @media (min-width: 1200px) {
+        flex-basis: 73%;
+      }
+      @media (min-width: 1600px) {
         flex-basis: 70%;
       }
       .product {
