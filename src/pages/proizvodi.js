@@ -32,7 +32,6 @@ query {
     edges {
       node {
         contentful_id
-        node_locale
         slug
         category
         image {
