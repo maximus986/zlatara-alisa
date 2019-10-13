@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const CategoriesSidebar = ({className}) => {
@@ -25,7 +24,6 @@ const CategoriesSidebar = ({className}) => {
   `;
   const response = useStaticQuery(data);
   const categories = response.categories.edges;
-  console.log(categories);
   return (
     <div className={className}>
       <div className="sidebar">
@@ -34,8 +32,8 @@ const CategoriesSidebar = ({className}) => {
         {
           categories.map(category => {
             return (
-            <li className="sidebar-list__item">
-              <AniLink fade to={`/${category.node.slug}`} className="sidebar-list__item-link" activeClassName="active" key={category.node.contentful_id}>
+            <li className="sidebar-list__item" key={category.node.contentful_id}>
+              <AniLink fade to={`/${category.node.slug}`} className="sidebar-list__item-link" activeClassName="active" >
                 <h5 className="sidebar-list__item-link-title">{category.node.category}</h5>
               </AniLink>
             </li>

@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Hero from '../components/Hero';
 import Slider from "react-slick";
-import ProductsTeaser from '../components/Products-teaser';
+import FeaturedProducts from '../components/FeaturedProducts';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -19,7 +19,6 @@ import "slick-carousel/slick/slick-theme.css";
   arrows: false,
 
 };
-
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Početna" />
@@ -30,7 +29,8 @@ const IndexPage = ({data}) => (
       })
     }
     </Slider>
-    <ProductsTeaser />
+    <FeaturedProducts topSeller={true} newest={false} title="najprodavaniji proizvodi"/>
+    <FeaturedProducts topSeller={false} newest={true} title="najnoviji proizvodi"/>
   </Layout>
 )
 export default IndexPage

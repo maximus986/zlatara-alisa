@@ -13,7 +13,10 @@ const Title = ({title, className}) => {
 
 export default styled(Title)`
 .title {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
   font-weight: 300;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -22,7 +25,7 @@ export default styled(Title)`
   color: var(--main-dark);
     &:after {
       content: "";
-      width: 60px;
+      width: 90px;
       height: 1px;
       display: block;
       background: var(--main-color);

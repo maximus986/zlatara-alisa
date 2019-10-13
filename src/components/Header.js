@@ -71,6 +71,9 @@ export default styled(Header)`
     padding: 7px 33px;
   }
   @media(min-width: 992px) {
+    padding: 4px 25px;
+  }
+  @media(min-width: 1400px) {
     padding: 4px 100px;
   }
   @media(min-width: 1600px) {

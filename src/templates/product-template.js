@@ -6,13 +6,14 @@ import styled from 'styled-components';
 import Container from '../styled-components/Container';
 import ProductTeaser from '../components/Products-teaser';
 import { Breadcrumb } from "gatsby-plugin-breadcrumb"
+import FeaturedProducts from '../components/FeaturedProducts';
 
 
 const productTemplate = ({ data, className, pageContext: {
     breadcrumb: { crumbs },
   }}) => {
 
-  const { title, description, image } = data.product;
+  const { title, description, image, category } = data.product;
   return (
     <div className={className}>
       <Layout >
@@ -36,7 +37,9 @@ const productTemplate = ({ data, className, pageContext: {
           </div>
           </Container>
         </section>
-        <ProductTeaser />
+        <ProductTeaser relatedProduct={category} />
+        <FeaturedProducts topSeller={true} newest={false} title="najprodavaniji proizvodi"/>
+        <FeaturedProducts topSeller={false} newest={true} title="najnoviji proizvodi"/>
       </Layout>
     </div>
   );
@@ -74,6 +77,7 @@ export default styled(productTemplate)`
         }
       }
       &-details {
+
         @media(min-width: 576px) {
           width: 45%;
           margin-left: 2.5%;
@@ -144,6 +148,7 @@ export const query = graphql`
   product: contentfulProduct(slug: { eq: $slug }) {
     title
     description
+    category
     image {
       fluid {
         ...GatsbyContentfulFluid

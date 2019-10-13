@@ -69,13 +69,15 @@ const settings = {
   ]
 };
 
-const ProductsTeaser = ({relatedProduct, className}) => {
+const FeaturedProducts = ({topSellers, newest, title, className}) => {
   const data = graphql`
   {
     products: allContentfulProduct(filter: { node_locale: { eq: "en-US" } }) {
       edges {
         node {
           contentful_id
+          topSeller
+          newest
           title
           description
           category
@@ -93,14 +95,18 @@ const ProductsTeaser = ({relatedProduct, className}) => {
   const response = useStaticQuery(data);
   const products = response.products.edges;
   const filteredProducts = products.filter(product => {
-    return product.node.category === relatedProduct;
+    if(topSellers && !newest) {
+      return product.node.topSellers === true;
+    } else {
+      return product.node.newest === true;
+    }
   })
 
   return (
     <div className={className}>
-      <section className="products-teaser">
+      <section className="featured-products">
       <Container>
-        <Title title="slični proizvodi" />
+        <Title title={title} />
           <Slider {...settings}>
           {
             filteredProducts.map((product) => {
@@ -114,22 +120,22 @@ const ProductsTeaser = ({relatedProduct, className}) => {
   );
 }
 
-export default styled(ProductsTeaser)`
-  .products-teaser {
+export default styled(FeaturedProducts)`
+  .featured-products {
     padding: 40px 0;
-    text-align: center;
     border-bottom: 1px solid var(--main-color);
     @media (min-width: 768px) {
       padding: 50px 0;
     }
+    text-align: center;
     .slick-arrow {
       font-size: 1.6rem;
       line-height: 46px;
       position: absolute;
-      z-index: 1000;
       top: 50%;
       width: 40px;
       height: 40px;
+      z-index: 1000;
       color: rgba(51, 51, 51, 0.7);
       border-radius: 50%;
       text-align: center;

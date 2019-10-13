@@ -33,6 +33,7 @@ export default styled(Product)`
     border: 1px solid var(--main-color);
     font-family: 'Raleway', sans-serif;
     color: var(--main-dark);
+    background: var(--main-white);
     transition: 0.3s linear;
     &:hover {
       box-shadow: 0px 1px 6px 1px #ccc;
