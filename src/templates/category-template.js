@@ -1,20 +1,24 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../../components/layout';
-import SEO from '../../components/seo';
-import Container from '../../styled-components/Container';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import Container from '../styled-components/Container';
 import { Breadcrumb } from "gatsby-plugin-breadcrumb"
-import Product from '../../components/Product';
-import CategoriesSidebar from '../../components/CategoriesSidebar';
+import Product from '../components/Product';
+import CategoriesSidebar from '../components/CategoriesSidebar';
 import styled from 'styled-components';
 
-const srebro = ({data, className, pageContext: {
+const CategoryTemplate = ({data, className, pageContext: {
     breadcrumb: { crumbs },
   }}) => {
   const products = data.products.edges;
+  const category = data.category.category;
+  const filteredProducts = products.filter(product => {
+    return product.node.category === category.toLowerCase();
+  })
   return (
     <Layout>
-      <SEO title="Srebro" />
+      <SEO title="Burme" />
       <Container>
       <div className={className}>
         <div className="breadcrumbs">
@@ -25,12 +29,12 @@ const srebro = ({data, className, pageContext: {
           />
         </div>
           <section className="products">
-          <article className="products-sidebar">
-            <CategoriesSidebar />
-          </article>
-          <article className="products-list">
+            <article className="products-sidebar">
+              <CategoriesSidebar />
+            </article>
+            <article className="products-list">
               {
-                products.map((product) => {
+                filteredProducts.map((product) => {
                   return <Product product={product.node} key={product.node.contentful_id} className="product"/>
                 })
               }
@@ -42,7 +46,7 @@ const srebro = ({data, className, pageContext: {
   );
 }
 
-export default styled(srebro)`
+export default styled(CategoryTemplate)`
   .products {
     display: flex;
     align-items: flex-start;
@@ -126,23 +130,25 @@ export default styled(srebro)`
 `
 
 export const query = graphql`
-  query {
-  products: allContentfulProduct(
-    filter: { category: { eq: "srebro" }, node_locale: { eq: "en-US" } }
-  ) {
-    edges {
-      node {
-        contentful_id
-        title
-        description
-        slug
-        image {
-          fluid {
-            ...GatsbyContentfulFluid
+  query($slug: String) {
+    category: contentfulCategory(slug: { eq: $slug }) {
+      category
+    }
+    products: allContentfulProduct(filter: { node_locale: { eq: "en-US" } }) {
+      edges {
+        node {
+          contentful_id
+          title
+          description
+          category
+          slug
+          image {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
           }
         }
       }
     }
-  }
 }
 `
