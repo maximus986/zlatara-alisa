@@ -96,7 +96,7 @@ const FeaturedProducts = ({topSellers, newest, title, className}) => {
   const products = response.products.edges;
   const filteredProducts = products.filter(product => {
     if(topSellers && !newest) {
-      return product.node.topSellers === true;
+      return product.node.topSeller === true;
     } else {
       return product.node.newest === true;
     }

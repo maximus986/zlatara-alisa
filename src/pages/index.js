@@ -19,7 +19,7 @@ import "slick-carousel/slick/slick-theme.css";
   arrows: false,
 
 };
-const IndexPage = ({data}) => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Početna" />
     <Slider {...settings}>
@@ -29,8 +29,8 @@ const IndexPage = ({data}) => (
       })
     }
     </Slider>
-    <FeaturedProducts topSeller={true} newest={false} title="najprodavaniji proizvodi"/>
-    <FeaturedProducts topSeller={false} newest={true} title="najnoviji proizvodi"/>
+    <FeaturedProducts topSellers={true} newest={false} title="najprodavaniji proizvodi"/>
+    <FeaturedProducts topSellers={false} newest={true} title="najnoviji proizvodi"/>
   </Layout>
 )
 export default IndexPage
