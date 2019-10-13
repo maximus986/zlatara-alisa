@@ -1,0 +1,45 @@
+.about {
+  padding: 40px 0;
+  text-align: center;
+
+}
+
+.about-content {
+  margin-top: -20px;
+}
+
+.about-img-wrapper {
+  margin-bottom: 20px;
+
+}
+
+.about-img {
+  width: 100%;
+}
+
+.about-text {
+}
+
+.about-text-item {
+  font-size: 1.1rem;
+}
+
+.about-text-item:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 576px) {
+  .about-content {
+    display: flex;
+
+  }
+  .about-img-wrapper {
+    width: 50%;
+    margin-right: 15px;
+  }
+
+  .about-text {
+    width: 50%;
+    text-align: justify;
+  }
+}

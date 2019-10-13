@@ -17,42 +17,47 @@ const oNama = ({data}) => {
       <section className={styles.about}>
         <Container>
           <Title title="ovo je naša priča" />
-          <figure className={styles.aboutImgWrapper}>
-            <Img fluid={images[0].node.childImageSharp.fluid} className={styles.aboutLeadImg} />
-          </figure>
-          <p className={styles.aboutText}>
-            Još davne 1972. godine Nuhi Husnijar osnovao je časovničarsko-zlatarsku radnju.
-            I dan danas ovaj porodični posao obavljamo revnosno, predano i profesionalno.
-            Delatnost radnje proširena je 2001. godine.
-          </p>
-          <figure className={styles.aboutImgWrapper}>
-            <Img fluid={images[2].node.childImageSharp.fluid} className={styles.aboutImg} />
-          </figure>
-          <figure className={styles.aboutImgWrapper}>
-            <Img fluid={images[3].node.childImageSharp.fluid} className={styles.aboutImg} />
-          </figure>
-          <p className={styles.aboutText}>
-            Bavimo se servisom, popravkom i prodajom svih vrsta časovnika: ručnih (analognih i kvarcnih),
-            zidnih, stonih i kaminskih. Vršimo zamenu kaiša i narukvica, poliranje i zamenu stakla na časovnicima.
-          </p>
-          <p className={styles.aboutText}>
-            Po veoma povoljnim cenama kod nas možete izvršiti zamenu starog zlata za novo, ali i doneti nam lomljeno zlato
-            jer se bavimo i otkupom. Izlazimo Vam u susret i ispunjavamo Vaše želje praveći sve vrste nakita po narudžbini.
-            Pored nakita kod nas možete naručiti i kovane zlatnike, sve po Vašoj ideji.
-          </p>
-          <figure className={styles.aboutImgWrapper}>
-            <Img fluid={images[1].node.childImageSharp.fluid} className={styles.aboutImg} />
-          </figure>
-          <p className={styles.aboutText}>
-            Kod nas možete pronaći veliki izbor prstenja, burmi, ogrlica, narukvica, privezaka, lančića, satova, minđuša...
-            Verujemo da ćete naći nešto što odražava Vašu ličnost.
-            Pored kupovine kod nas možete Vašem nakitu vratiti stari sjaj,jer nudimo i usluge poliranja,
-            ao i zamenu i fasovanje (postavljanje) kamenja na nakitu.
-          </p>
-
+          <div className={styles.aboutContent}>
+            <figure className={styles.aboutImgWrapper}>
+              <Img fluid={images[1].node.childImageSharp.fluid} className={styles.aboutImg} />
+            </figure>
+            <article className={styles.aboutText}>
+              <p className={styles.aboutTextItem}>
+                Još davne 1972. godine Nuhi Husnijar osnovao je časovničarsko-zlatarsku radnju.
+                I dan danas ovaj porodični posao obavljamo revnosno, predano i profesionalno.
+                Delatnost radnje proširena je 2001. godine.
+              </p>
+              <p className={styles.aboutTextItem}>
+                Bavimo se servisom, popravkom i prodajom svih vrsta časovnika: ručnih (analognih i kvarcnih),
+                zidnih, stonih i kaminskih. Vršimo zamenu kaiša i narukvica, poliranje i zamenu stakla na časovnicima.
+              </p>
+              <p className={styles.aboutTextItem}>
+                Po veoma povoljnim cenama kod nas možete izvršiti zamenu starog zlata za novo, ali i doneti nam lomljeno zlato
+                jer se bavimo i otkupom. Izlazimo Vam u susret i ispunjavamo Vaše želje praveći sve vrste nakita po narudžbini.
+                Pored nakita kod nas možete naručiti i kovane zlatnike, sve po Vašoj ideji.
+              </p>
+              <p className={styles.aboutTextItem}>
+                Kod nas možete pronaći veliki izbor prstenja, burmi, ogrlica, narukvica, privezaka, lančića, satova, minđuša...
+                Verujemo da ćete naći nešto što odražava Vašu ličnost.
+                Pored kupovine kod nas možete Vašem nakitu vratiti stari sjaj,jer nudimo i usluge poliranja,
+                ao i zamenu i fasovanje (postavljanje) kamenja na nakitu.
+              </p>
+              <div className={styles.aboutImages}>
+                 <figure className={styles.aboutImgWrapper}>
+                  <Img fluid={images[0].node.childImageSharp.fluid} className={styles.aboutImg} />
+                </figure>
+                 <figure className={styles.aboutImgWrapper}>
+                  <Img fluid={images[2].node.childImageSharp.fluid} className={styles.aboutImg} />
+                </figure>
+                 <figure className={styles.aboutImgWrapper}>
+                  <Img fluid={images[3].node.childImageSharp.fluid} className={styles.aboutImg} />
+                </figure>
+              </div>
+            </article>
+            </div>
         </Container>
-      </section>
-    </Layout>
+    </section>
+  </Layout>
 );
 }
 
