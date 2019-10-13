@@ -42,17 +42,6 @@ const oNama = ({data}) => {
                 Pored kupovine kod nas možete Vašem nakitu vratiti stari sjaj,jer nudimo i usluge poliranja,
                 ao i zamenu i fasovanje (postavljanje) kamenja na nakitu.
               </p>
-              <div className={styles.aboutImages}>
-                 <figure className={styles.aboutImgWrapper}>
-                  <Img fluid={images[0].node.childImageSharp.fluid} className={styles.aboutImg} />
-                </figure>
-                 <figure className={styles.aboutImgWrapper}>
-                  <Img fluid={images[2].node.childImageSharp.fluid} className={styles.aboutImg} />
-                </figure>
-                 <figure className={styles.aboutImgWrapper}>
-                  <Img fluid={images[3].node.childImageSharp.fluid} className={styles.aboutImg} />
-                </figure>
-              </div>
             </article>
             </div>
         </Container>
