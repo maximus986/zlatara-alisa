@@ -6,8 +6,10 @@ import Hero from '../components/Hero';
 import Slider from "react-slick";
 import FeaturedProducts from '../components/FeaturedProducts';
 import Intro from '../components/Intro';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import styles from '../styles/hero.module.css';
 
  const settings = {
   autoplay: true,
@@ -26,7 +28,12 @@ const IndexPage = ({ data }) => (
     <Slider {...settings}>
     {
       data.allFile.edges.map(({ node }, index) => {
-        return <Hero home="true" img={node.childImageSharp.fluid} key={index} />
+        return <Hero home="true" img={node.childImageSharp.fluid} key={index}>
+        <div className={styles.heroContentWrapper}>
+          <h1 className={styles.heroContent}>tradicija i iskustvo</h1>
+          <AniLink fade to="/proizvodi" className="btn">Naša ponuda</AniLink>
+        </div>
+        </Hero>
       })
     }
     </Slider>
