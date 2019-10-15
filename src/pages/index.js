@@ -5,6 +5,7 @@ import SEO from '../components/seo';
 import Hero from '../components/Hero';
 import Slider from "react-slick";
 import FeaturedProducts from '../components/FeaturedProducts';
+import Intro from '../components/Intro';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -29,6 +30,7 @@ const IndexPage = ({ data }) => (
       })
     }
     </Slider>
+    <Intro />
     <FeaturedProducts topSellers={true} newest={false} title="najprodavaniji proizvodi"/>
     <FeaturedProducts topSellers={false} newest={true} title="najnoviji proizvodi"/>
   </Layout>
