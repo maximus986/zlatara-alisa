@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { graphql } from 'gatsby';
+import FsLightbox from 'fslightbox-react';
 import Img from 'gatsby-image';
 import Layout from '../components/layout';
 import styled from 'styled-components';
@@ -12,7 +13,7 @@ import FeaturedProducts from '../components/FeaturedProducts';
 const productTemplate = ({ data, className, pageContext: {
     breadcrumb: { crumbs },
   }}) => {
-
+  const [toggler, setToggler] = useState(false);
   const { title, description, image, category } = data.product;
   return (
     <div className={className}>
@@ -29,7 +30,15 @@ const productTemplate = ({ data, className, pageContext: {
       <section className="single-product">
         <Container>
           <div className="product">
-            <Img fluid={image.fluid} className="product__img"/>
+          <FsLightbox
+            toggler={ toggler }
+            sources={ [
+              `${image.fluid.src}`
+            ] }
+            />
+            <div className="product__img" onClick={ () => setToggler(!toggler) }>
+              <Img fluid={image.fluid}/>
+            </div>
             <div className="product-details">
               <h2 className="product-details__title">{title}</h2>
               <p className="product-details__description">{description}</p>
@@ -64,8 +73,9 @@ export default styled(productTemplate)`
         justify-content: center;
       }
       &__img {
-        width: 100;
+        width: 100%;
         max-width: 100%;
+        cursor: pointer;
         @media(min-width: 576px) {
           width: 45%;
           margin-right: 2.5%;
