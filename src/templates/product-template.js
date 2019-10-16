@@ -8,19 +8,6 @@ import Container from '../styled-components/Container';
 import ProductTeaser from '../components/Products-teaser';
 import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 import FeaturedProducts from '../components/FeaturedProducts';
-import AOS from 'aos/dist/aos';
-import 'aos/dist/aos.css';
-
-AOS.init({
-  offset: 0, // offset (in px) from the original trigger point
-  delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 600, // values from 0 to 3000, with step 50ms
-  easing: 'ease', // default easing for AOS animations
-  once: true, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: 'top-bottom', // d
-});
-
 
 const productTemplate = ({ data, className, pageContext: {
     breadcrumb: { crumbs },
@@ -48,10 +35,20 @@ const productTemplate = ({ data, className, pageContext: {
               `${image.fluid.src}`
             ] }
             />
-            <div className="product__img" onClick={ () => setToggler(!toggler) } data-aos="fade-right" data-aos-once="true">
+            <div className="product__img" onClick={ () => setToggler(!toggler) }
+              data-aos="fade-right"
+              data-aos-once="true"
+              data-aos-offset="0"
+              data-aos-delay="800"
+              data-aos-duration="600">
               <Img fluid={image.fluid}/>
             </div>
-            <div className="product-details" data-aos="fade-left" data-aos-once="true">
+            <div className="product-details"
+              data-aos="fade-left"
+              data-aos-once="true"
+              data-aos-offset="0"
+              data-aos-delay="800"
+              data-aos-duration="600">
               <h2 className="product-details__title">{title}</h2>
               <p className="product-details__description">{description}</p>
             </div>
