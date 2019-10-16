@@ -1,7 +1,13 @@
 .categories {
   display: flex;
   flex-direction: column;
-  margin: 30px -20px;
+  margin: 0 -20px;
+  padding-bottom: 40px;
+}
+
+.title {
+  text-align: center;
+  margin-top: 40px;
 }
 
 @media only screen and (min-width: 576px) {
@@ -10,5 +16,19 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+  .title {
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .categories {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 50px;
+  }
+  .title {
+    margin-top: 50px;
   }
 }

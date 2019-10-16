@@ -31,6 +31,9 @@ export default styled(Intro)`
     padding: 40px 0;
     border-bottom: 1px solid var(--main-color);
     text-align: center;
+    @media(min-width: 768px) {
+      padding: 50px 0;
+    }
     &-content {
       margin-bottom: 35px;
       letter-spacing: 1px;

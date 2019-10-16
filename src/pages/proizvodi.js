@@ -5,6 +5,7 @@ import Hero from '../components/Hero';
 import SEO from '../components/seo';
 import Category from '../components/Category';
 import Container from '../styled-components/Container';
+import Title from '../components/Title';
 import styles from '../styles/products.module.css';
 
 export default function proizvodi({data}) {
@@ -14,12 +15,20 @@ export default function proizvodi({data}) {
       <SEO title="Proizvodi" />
       <Hero img={data.productsBg.childImageSharp.fluid} />
       <Container>
-        <section className={styles.categories}
-          data-aos="fade-up"
-          data-aos-once="true"
-          data-aos-offset="100"
-          data-aos-duration="500"
-          data-aos-delay="800">
+      <div
+        data-aos="fade-up"
+        data-aos-once="true"
+        data-aos-offset="0"
+        data-duration="1000"
+        data-delay="2500">
+        <Title title="Naša ponuda" className={styles.title}/>
+      </div>
+      <section className={styles.categories}
+        data-aos="fade-up"
+        data-aos-once="true"
+        data-aos-offset="150"
+        data-aos-duration="500"
+        data-aos-delay="400">
           {
             categories.map((category, key) => {
               return <Category category={category.node} key={category.node.contentful_id} />
