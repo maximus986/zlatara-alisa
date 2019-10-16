@@ -23,7 +23,22 @@ const Header = ({ className }) => {
         }>
           <div className="main-navbar-header">
             <AniLink fade to="/" className="main-navbar-header__logo">
-              <img src={logo} alt="Logo" className="logo-icon"/>
+              <span className="logo-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="252" height="108.437" viewBox="0 0 252 108.437">
+                <g id="Group_6" data-name="Group 6" transform="translate(-806 -181.563)">
+                  <text id="Alisa_AN" data-name="Alisa AN" transform="translate(806 273)" fill="#d4c36d" font-size="60" font-family="Tangerine-Regular, Tangerine"><tspan x="0" y="0">Alisa AN</tspan></text>
+                  <g id="Group_4" data-name="Group 4" transform="translate(854.607 170.705) rotate(-22)">
+                    <path id="Path_3" data-name="Path 3" d="M24.3,40,20,52.915,44.107,78.887,68.214,52.915,63.91,40h-15.5l-4.3,6.457L39.8,40Z" transform="translate(0 0)" fill="none" stroke="#d4c36d" stroke-width="1"/>
+                    <path id="Path_4" data-name="Path 4" d="M188.012,85.144v32.507" transform="translate(-143.905 -38.803)" fill="none" stroke="#d4c36d" stroke-width="1"/>
+                    <path id="Path_5" data-name="Path 5" d="M207.8,40,188,78.887" transform="translate(-143.893 0)" fill="none" stroke="#d4c36d" stroke-width="1"/>
+                    <path id="Path_6" data-name="Path 6" d="M50,40,69.8,78.887" transform="translate(-25.695 0)" fill="none" stroke="#d4c36d" stroke-width="1"/>
+                    <path id="Path_7" data-name="Path 7" d="M20,130" transform="translate(0 -77.085)" fill="none" stroke="#d4c36d" stroke-width="1"/>
+                    <path id="Path_8" data-name="Path 8" d="M27.605,85,20,91.457" transform="translate(0 -38.543)" fill="none" stroke="#d4c36d" stroke-width="1"/>
+                    <path id="Path_9" data-name="Path 9" d="M113.609,91.457,106,85H73" transform="translate(-45.395 -38.543)" fill="none" stroke="#d4c36d" stroke-width="1"/>
+                  </g>
+                </g>
+              </svg>
+              </span>
             </AniLink>
               <IoIosClose className="main-navbar-header__close" onClick={toggleNav}/>
           </div>
