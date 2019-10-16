@@ -10,6 +10,10 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from '../styles/hero.module.css';
+import AOS from 'aos/dist/aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
  const settings = {
   autoplay: true,
@@ -29,7 +33,12 @@ const IndexPage = ({ data }) => (
     {
       data.allFile.edges.map(({ node }, index) => {
         return <Hero home="true" img={node.childImageSharp.fluid} key={index}>
-        <div className={styles.heroContentWrapper}>
+        <div className={styles.heroContentWrapper}
+          data-aos="fade-in"
+          data-aos-once="true"
+          data-aos-delay="500"
+          data-aos-offset="0"
+          data-aos-duration="500">
           <h1 className={styles.heroContent}>tradicija i iskustvo</h1>
           <AniLink fade to="/proizvodi" className="btn">Naša ponuda</AniLink>
         </div>

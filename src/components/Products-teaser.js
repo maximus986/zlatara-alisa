@@ -98,7 +98,12 @@ const ProductsTeaser = ({relatedProduct, className}) => {
 
   return (
     <div className={className}>
-      <section className="products-teaser">
+      <section className="products-teaser"
+        data-aos="fade-up"
+        data-aos-once="true"
+        data-aos-offset="100"
+        data-duration="800"
+        data-delay="0">
       <Container>
         <Title title="slični proizvodi" />
           <Slider {...settings}>
@@ -107,7 +112,7 @@ const ProductsTeaser = ({relatedProduct, className}) => {
               return <Product product={product.node} key={product.node.contentful_id}/>
             })
           }
-          </Slider >
+          </Slider>
       </Container>
       </section>
     </div>

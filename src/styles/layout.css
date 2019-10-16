@@ -39,6 +39,10 @@ body *:focus {
   outline: none;
 }
 
+main {
+  height: 100%;
+}
+
 a {
   text-decoration: none;
 }

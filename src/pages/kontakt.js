@@ -18,43 +18,46 @@ const kontakt = ({data}) => {
       <SEO title="Kontakt" />
       <Hero img={data.contactBg.childImageSharp.fluid}/>
       <div className={styles.container}>
-        <section className={styles.contact}>
-          <Title title="Kontaktirajte nas" className={styles.title}/>
-          <article className={styles.contact__map}>
-            <Map />
-          </article>
-          <article className={styles.contact__details}>
-            <div className={styles.contactItem}>
+        <section className={styles.contact}
+          data-aos="fade-up"
+          data-aos-once="true"
+          data-aos-offset="100"
+          data-duration="1000"
+          data-delay="1000">
+        <Title title="Kontaktirajte nas" className={styles.title}/>
+        <article className={styles.contact__map}>
+          <Map />
+        </article>
+        <article className={styles.contact__details}
+            data-aos="fade-up"
+            data-aos-once="false"
+            data-aos-duration="1000"
+            data-aos-delay="800"
+            data-aos-offset="100">
+          <div className={styles.contactItem}
+            >
               <IoIosPhonePortrait className={styles.contactIcon}/>
               <a href="tel:+381112754118" className={styles.contactTel}>011/2754 118</a>
               <a href="tel:+381646687634" className={styles.contactTel}>064/6687 634</a>
-            </div>
-            <div className={styles.contactItem}>
+          </div>
+          <div className={styles.contactItem}
+            >
               <IoIosMail className={styles.contactIcon}/>
-              <a href="mailto:zlatara.alisa@gmail.com" className={styles.contactMail}>zlatara.alisa@gmail.com</a>
-            </div>
-            <div className={styles.contactItem}>
-            <IoIosPin className={styles.contactIcon} />
+            <a href="mailto:zlatara.alisa@gmail.com" className={styles.contactMail}>zlatara.alisa@gmail.com</a>
+          </div>
+          <div className={styles.contactItem}
+            >
+              <IoIosPin className={styles.contactIcon} />
               <p>Ruzveltova 37, Beograd</p>
-            </div>
-            <div className={styles.contactItem}>
-              <IoMdTime className={styles.contactIcon} />
+          </div>
+          <div className={styles.contactItem}
+            >
+            <IoMdTime className={styles.contactIcon} />
               <p className={styles.contactDays}>Ponedeljak - Petak</p>
               <span className={styles.contactHours}>09:00 - 17:00 časova</span>
               <p className={styles.contactDays}>Subota</p>
               <span className={styles.contactHours}>09:00 - 15:00 časova</span>
             </div >
-            <div className={styles.socialIcons}>
-            {
-              socialLinks.map((link, index) => {
-                return (
-                  <a href={link.url} key={index} className={styles.socialLink} target="_blank" rel="noopener noreferrer">
-                    {link.icon}
-                  </a>
-                )
-              })
-            }
-          </div>
           </article>
         </section>
       </div>

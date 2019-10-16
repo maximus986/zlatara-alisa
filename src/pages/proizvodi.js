@@ -12,9 +12,14 @@ export default function proizvodi({data}) {
   return (
     <Layout>
       <SEO title="Proizvodi" />
-      <Hero img={data.productsBg.childImageSharp.fluid}/>
+      <Hero img={data.productsBg.childImageSharp.fluid} />
       <Container>
-        <section className={styles.categories}>
+        <section className={styles.categories}
+          data-aos="fade-up"
+          data-aos-once="true"
+          data-aos-offset="100"
+          data-aos-duration="500"
+          data-aos-delay="800">
           {
             categories.map((category, key) => {
               return <Category category={category.node} key={category.node.contentful_id} />

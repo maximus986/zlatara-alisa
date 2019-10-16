@@ -104,7 +104,12 @@ const FeaturedProducts = ({topSellers, newest, title, className}) => {
 
   return (
     <div className={className}>
-      <section className="featured-products">
+      <section className="featured-products"
+        data-aos="fade-up"
+        data-aos-once="true"
+        data-aos-offset="200"
+        data-duration="500"
+        data-delay="300">
       <Container>
         <Title title={title} />
           <Slider {...settings}>
