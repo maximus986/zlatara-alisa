@@ -5,11 +5,9 @@ import Hero from '../components/Hero';
 import Title from '../components/Title';
 import Container from '../styled-components/Container';
 import SEO from '../components/seo';
-import Img from 'gatsby-image';
 import styles from '../styles/about.module.css';
 
 const oNama = ({data}) => {
-  const images = data.about.edges;
   return (
     <Layout>
       <SEO title="O nama" />
@@ -61,17 +59,6 @@ query {
     childImageSharp {
       fluid(maxWidth: 4160, quality: 90) {
         ...GatsbyImageSharpFluid
-      }
-    }
-  }
-  about: allFile(filter: { relativeDirectory: { eq: "aboutUs" } }) {
-    edges {
-      node {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   }

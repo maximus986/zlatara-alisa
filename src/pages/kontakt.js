@@ -5,7 +5,6 @@ import Hero from '../components/Hero';
 import SEO from '../components/seo';
 import Map from '../components/Map';
 import Title from '../components/Title';
-import socialLinks from '../static-data/social-links';
 import { IoIosPhonePortrait } from 'react-icons/io';
 import { IoIosPin } from 'react-icons/io';
 import { IoMdTime } from 'react-icons/io';
