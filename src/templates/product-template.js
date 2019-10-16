@@ -67,6 +67,15 @@ export default styled(productTemplate)`
 .single-product {
   border-bottom: 1px solid var(--main-color);
   padding: 30px 0;
+  @media (min-width: 768px) {
+    padding: 50px 0;
+  }
+  @media (min-width: 1200px) {
+    padding: 90px 0;
+  }
+  @media (min-width: 992px) {
+    padding: 70px 0;
+  }
     .product {
       display: flex;
       flex-direction: column;
@@ -76,7 +85,7 @@ export default styled(productTemplate)`
       @media(min-width: 576px) {
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
       }
       @media(min-width: 1200px) {
         justify-content: center;
@@ -91,7 +100,7 @@ export default styled(productTemplate)`
           border: 1px solid var(--main-color);
         }
         @media(min-width: 1200px) {
-          width: 30%;
+          width: 40%;
           margin-right: 5%;
         }
       }
