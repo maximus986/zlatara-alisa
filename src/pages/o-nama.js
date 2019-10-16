@@ -22,42 +22,32 @@ const oNama = ({data}) => {
         data-delay="2500">
         <Container>
           <Title title="ovo je naša priča" />
-          <div className={styles.aboutContent}>
-            <figure className={styles.aboutImgWrapper}
-              data-aos="fade-right"
-              data-aos-once="true"
-              data-aos-offset="300"
-              data-aos-delay="300"
-              >
-              <Img fluid={images[1].node.childImageSharp.fluid} className={styles.aboutImg} />
-            </figure>
-            <article className={styles.aboutText}
-              data-aos="fade-left"
-              data-aos-once="true"
-              data-aos-offset="300"
-              data-aos-delay="300">
-              <p className={styles.aboutTextItem}>
-                Još davne 1972. godine Nuhi Husnijar osnovao je časovničarsko-zlatarsku radnju.
-                I dan danas ovaj porodični posao obavljamo revnosno, predano i profesionalno.
-                Delatnost radnje proširena je 2001. godine.
-              </p>
-              <p className={styles.aboutTextItem}>
-                Bavimo se servisom, popravkom i prodajom svih vrsta časovnika: ručnih (analognih i kvarcnih),
-                zidnih, stonih i kaminskih. Vršimo zamenu kaiša i narukvica, poliranje i zamenu stakla na časovnicima.
-              </p>
-              <p className={styles.aboutTextItem}>
-                Po veoma povoljnim cenama kod nas možete izvršiti zamenu starog zlata za novo, ali i doneti nam lomljeno zlato
-                jer se bavimo i otkupom. Izlazimo Vam u susret i ispunjavamo Vaše želje praveći sve vrste nakita po narudžbini.
-                Pored nakita kod nas možete naručiti i kovane zlatnike, sve po Vašoj ideji.
-              </p>
-              <p className={styles.aboutTextItem}>
-                Kod nas možete pronaći veliki izbor prstenja, burmi, ogrlica, narukvica, privezaka, lančića, satova, minđuša...
-                Verujemo da ćete naći nešto što odražava Vašu ličnost.
-                Pored kupovine kod nas možete Vašem nakitu vratiti stari sjaj,jer nudimo i usluge poliranja,
-                ao i zamenu i fasovanje (postavljanje) kamenja na nakitu.
-              </p>
-            </article>
-            </div>
+          <article className={styles.aboutContent}
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-offset="300"
+            data-aos-delay="300">
+            <p className={styles.aboutContentItem}>
+              Još davne 1972. godine Nuhi Husnijar osnovao je časovničarsko-zlatarsku radnju.
+              I dan danas ovaj porodični posao obavljamo revnosno, predano i profesionalno.
+              Delatnost radnje proširena je 2001. godine.
+            </p>
+            <p className={styles.aboutContentItem}>
+              Bavimo se servisom, popravkom i prodajom svih vrsta časovnika: ručnih (analognih i kvarcnih),
+              zidnih, stonih i kaminskih. Vršimo zamenu kaiša i narukvica, poliranje i zamenu stakla na časovnicima.
+            </p>
+            <p className={styles.aboutContentItem}>
+              Po veoma povoljnim cenama kod nas možete izvršiti zamenu starog zlata za novo, ali i doneti nam lomljeno zlato
+              jer se bavimo i otkupom. Izlazimo Vam u susret i ispunjavamo Vaše želje praveći sve vrste nakita po narudžbini.
+              Pored nakita kod nas možete naručiti i kovane zlatnike, sve po Vašoj ideji.
+            </p>
+            <p className={styles.aboutContentItem}>
+              Kod nas možete pronaći veliki izbor prstenja, burmi, ogrlica, narukvica, privezaka, lančića, satova, minđuša...
+              Verujemo da ćete naći nešto što odražava Vašu ličnost.
+              Pored kupovine kod nas možete Vašem nakitu vratiti stari sjaj, jer nudimo i usluge poliranja,
+              ao i zamenu i fasovanje (postavljanje) kamenja na nakitu.
+            </p>
+          </article>
         </Container>
     </section>
   </Layout>
