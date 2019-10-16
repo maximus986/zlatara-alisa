@@ -67,7 +67,7 @@ export default styled(CategoryTemplate)`
       flex-wrap: wrap;
       text-align: center;
       @media (min-width: 576px) {
-        justify-content: space-between;
+        justify-content: flex-start;
       }
       @media (min-width: 1200px) {
         flex-basis: 73%;
@@ -84,6 +84,9 @@ export default styled(CategoryTemplate)`
           flex-basis: auto;
           &:last-of-type {
             margin-bottom: 15px;
+          }
+          &:not(:nth-of-type(3n)) {
+            margin-right: 6px;
           }
         }
         @media (min-width: 1200px) {

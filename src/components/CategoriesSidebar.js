@@ -54,7 +54,7 @@ export default styled(CategoriesSidebar)`
     &-title {
       font-size: 1.5rem;
       font-weight: 400;
-      padding: 20px 0;
+      padding: 14px 0;
     }
     &-list {
       list-style: none;
@@ -75,15 +75,6 @@ export default styled(CategoriesSidebar)`
             background: rgba(212,195,109,0.3);;
             color: var(--main-white);
           }
-          /* .sidebar-img-wrapper {
-            width: 250px;
-            height: 170px;
-            overflow: hidden;
-          }
-          &-img {
-            width: 100%;
-            height: 100%;
-          } */
           &-title {
             color: var(--main-dark);
             font-size: 1.2rem;

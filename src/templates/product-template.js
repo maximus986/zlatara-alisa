@@ -92,7 +92,7 @@ export default styled(productTemplate)`
       }
       &__img {
         width: 100%;
-        max-width: 100%;
+        max-width: 400px;
         cursor: pointer;
         @media(min-width: 576px) {
           width: 45%;
