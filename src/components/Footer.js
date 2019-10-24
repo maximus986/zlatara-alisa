@@ -32,7 +32,7 @@ const Footer = ({ className }) => {
         </div>
         <div className="copyrights">
           <h5 className="copyrights-title">
-            zlatara alisa n
+            zlatara alisa an
           </h5>
           <h5 className="copyrights-title">
             &copy;all rights reserved 2019
