@@ -13,7 +13,7 @@ import styles from '../styles/hero.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
- const settings = {
+const settings = {
   autoplay: true,
   autoplaySpeed: 5000,
   infinite: true,
