@@ -53,7 +53,7 @@ const kontakt = ({data}) => {
             >
             <IoMdTime className={styles.contactIcon} />
               <p className={styles.contactDays}>Ponedeljak - Petak</p>
-              <span className={styles.contactHours}>09:00 - 17:00 časova</span>
+              <span className={styles.contactHours}>09:00 - 19:00 časova</span>
               <p className={styles.contactDays}>Subota</p>
               <span className={styles.contactHours}>09:00 - 15:00 časova</span>
             </div >
