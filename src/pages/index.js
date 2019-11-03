@@ -26,14 +26,13 @@ const settings = {
 };
 class IndexPage extends Component {
   componentDidMount() {
-      this.aos = AOS;
-      this.aos.init();
-    }
-    componentDidUpdate() {
-      this.aos.refresh();
-    }
+    this.aos = AOS;
+    this.aos.init();
+  }
+  componentDidUpdate() {
+    this.aos.refresh();
+  }
   render() {
-    console.log(this.props.data);
     return (
       <Layout>
         <SEO title="Početna" />

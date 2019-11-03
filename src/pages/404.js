@@ -1,13 +1,43 @@
-import React from "react"
+import React,{ Component } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import FeaturedProducts from '../components/FeaturedProducts';
+import Title from '../components/Title';
+import Container from '../styled-components/Container'
+import styles from '../styles/404.module.css';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+class NotFoundPage extends Component {
+  componentDidMount() {
+    this.aos = AOS;
+    this.aos.init();
+  }
+  componentDidUpdate() {
+    this.aos.refresh();
+  }
+  render() {
+    return (
+      <Layout>
+        <SEO title="404: Stranica ne postoji" />
+        <section className={styles.notFound}>
+          <Container>
+            <Title title="Stranica ne postoji" />
+            <div className={styles.notFoundInfo}>
+              <h3 className={styles.title}>Zahtevana stranica nije pronađena.</h3>
+              <AniLink fade to="/" className={styles.link}>
+                <span className={styles.linkText}>Možete se vratiti na početnu starnu.</span>
+              </AniLink>
+              <p className={styles.teaser}>Ili bacite pogled na naše najprodavanije i najnovije proizvode.</p>
+            </div>
+          </Container>
+        </section>
+        <FeaturedProducts topSellers={true} newest={false} title="najprodavaniji proizvodi"/>
+        <FeaturedProducts topSellers={false} newest={true} title="najnoviji proizvodi"/>
+      </Layout>
+    )
+  }
+}
 
 export default NotFoundPage
