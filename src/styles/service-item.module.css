@@ -1,0 +1,16 @@
+.title {
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  padding: 10px;
+  border: 1px solid var(--main-color);
+  margin-bottom: 5px;
+}
+.title:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    width: 30%;
+  }
+}
