@@ -4,9 +4,10 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Zlatara Alisa AN`,
-    description: ``,
+    title: `Zlatara Alisa AN | Vereničko prstenje | Nakit od zlata i srebra | Burme | Časovnici | Poravka nakita i časovnika`,
+    description: `Specijalizovana radnja za prodaju nakita od zlata i srebra, časovnika, kao i popravku časovnika i nakita.`,
     author: `Aleksandar Maksimovic`,
+    keywords: `Zlatara, nakit, prstenje, burme, verenicko prstenje, mindjuse, privesci, narukvice, ogrlice, satovi, popravka satova, popravka nakita, popravka časovnika, servis`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
