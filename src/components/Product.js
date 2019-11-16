@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { Link } from "gatsby"
 
 const Product = ({product, className}) => {
   return (
     <div className={className}>
     <article className="product">
-      <AniLink fade to={`/${product.slug}`} className="product-link">
+      <Link to={`/${product.slug}`} className="product-link">
         <h5 className="product-title">
           {product.title}
         </h5>
@@ -17,7 +17,7 @@ const Product = ({product, className}) => {
         <p className="product-description">
           {product.description}
         </p>
-      </AniLink>
+      </Link>
     </article>
 
     </div>

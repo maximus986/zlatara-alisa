@@ -15,20 +15,10 @@ export default function proizvodi({data}) {
       <SEO title="Proizvodi" />
       <Hero img={data.productsBg.childImageSharp.fluid} />
       <Container>
-      <div
-        data-aos="fade-up"
-        data-aos-once="true"
-        data-aos-offset="0"
-        data-duration="1000"
-        data-delay="2500">
+      <div>
         <Title title="Naša ponuda" className={styles.title}/>
       </div>
-      <section className={styles.categories}
-        data-aos="fade-up"
-        data-aos-once="true"
-        data-aos-offset="150"
-        data-aos-duration="500"
-        data-aos-delay="400">
+      <section className={styles.categories}>
           {
             categories.map((category, key) => {
               return <Category category={category.node} key={category.node.contentful_id} />

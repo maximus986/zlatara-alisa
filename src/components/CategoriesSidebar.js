@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { Link } from "gatsby"
 
 const CategoriesSidebar = ({className}) => {
   const data = graphql`
@@ -33,9 +33,9 @@ const CategoriesSidebar = ({className}) => {
           categories.map(category => {
             return (
             <li className="sidebar-list__item" key={category.node.contentful_id}>
-              <AniLink fade to={`/${category.node.slug}`} className="sidebar-list__item-link" activeClassName="active" >
+              <Link to={`/${category.node.slug}`} className="sidebar-list__item-link" activeClassName="active" >
                 <h5 className="sidebar-list__item-link-title">{category.node.category}</h5>
-              </AniLink>
+              </Link>
             </li>
             )
           })

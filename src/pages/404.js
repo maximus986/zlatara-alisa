@@ -5,18 +5,9 @@ import FeaturedProducts from '../components/FeaturedProducts';
 import Title from '../components/Title';
 import Container from '../styled-components/Container'
 import styles from '../styles/404.module.css';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { Link } from "gatsby"
 
 class NotFoundPage extends Component {
-  componentDidMount() {
-    this.aos = AOS;
-    this.aos.init();
-  }
-  componentDidUpdate() {
-    this.aos.refresh();
-  }
   render() {
     return (
       <Layout>
@@ -26,9 +17,9 @@ class NotFoundPage extends Component {
             <Title title="Stranica ne postoji" />
             <div className={styles.notFoundInfo}>
               <h3 className={styles.title}>Zahtevana stranica nije pronađena.</h3>
-              <AniLink fade to="/" className={styles.link}>
+              <Link to="/" className={styles.link}>
                 <span className={styles.linkText}>Možete se vratiti na početnu starnu.</span>
-              </AniLink>
+              </Link>
               <p className={styles.teaser}>Ili bacite pogled na naše najprodavanije i najnovije proizvode.</p>
             </div>
           </Container>

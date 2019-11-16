@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { Link } from "gatsby"
 import links from '../static-data/links';
 import socialLinks from '../static-data/social-links';
 import logo from '../images/logo.svg';
@@ -15,16 +15,16 @@ const Header = ({ className }) => {
   return(
     <header className={className}>
       <div className="header-wrapper">
-        <AniLink fade to="/" className="logo">
+        <Link to="/" className="logo">
           <img src={logo} alt="Logo" className="logo-icon"/>
-        </AniLink>
+        </Link>
         <nav className={
           isOpen ? `main-navbar show` : `main-navbar`
         }>
           <div className="main-navbar-header">
-            <AniLink fade to="/" className="main-navbar-header__logo">
+            <Link to="/" className="main-navbar-header__logo">
               <img src={logo} alt="Logo" className="logo-icon"/>
-            </AniLink>
+            </Link>
               <IoIosClose className="main-navbar-header__close" onClick={toggleNav}/>
           </div>
           <ul className="main-nav">
@@ -32,7 +32,7 @@ const Header = ({ className }) => {
             links.map((link, index) => {
               return (
                 <li key={index} className="main-nav__item">
-                  <AniLink fade to={link.path} className="main-nav__link" activeClassName="active">{link.text}</AniLink>
+                  <Link to={link.path} className="main-nav__link" activeClassName="active">{link.text}</Link>
                 </li>
               );
             })

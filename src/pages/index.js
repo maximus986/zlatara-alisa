@@ -6,12 +6,10 @@ import Hero from '../components/Hero';
 import Slider from "react-slick";
 import FeaturedProducts from '../components/FeaturedProducts';
 import Intro from '../components/Intro';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { Link } from "gatsby"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from '../styles/hero.module.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const settings = {
   autoplay: true,
@@ -25,13 +23,6 @@ const settings = {
 
 };
 class IndexPage extends Component {
-  componentDidMount() {
-    this.aos = AOS;
-    this.aos.init();
-  }
-  componentDidUpdate() {
-    this.aos.refresh();
-  }
   render() {
     return (
       <Layout>
@@ -40,14 +31,9 @@ class IndexPage extends Component {
         {
           this.props.data.allFile.edges.map(({ node }, index) => {
             return <Hero home="true" img={node.childImageSharp.fluid} key={index}>
-            <div className={styles.heroContentWrapper}
-              data-aos="fade-in"
-              data-aos-once="true"
-              data-aos-delay="500"
-              data-aos-offset="0"
-              data-aos-duration="500">
+            <div className={styles.heroContentWrapper}>
               <h1 className={styles.heroContent}>tradicija i iskustvo</h1>
-              <AniLink fade to="/proizvodi" className="btn">Naša ponuda</AniLink>
+              <Link to="/proizvodi" className="btn">Naša ponuda</Link>
             </div>
             </Hero>
           })

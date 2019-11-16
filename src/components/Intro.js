@@ -2,24 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import Title from '../components/Title';
 import Container from '../styled-components/Container';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { Link } from "gatsby"
 
 const Intro = ({className}) => {
   return (
     <div className={className}>
-      <section className="intro"
-        data-aos="fade-up"
-        data-aos-once="true"
-        data-aos-offset="100"
-        data-duration="1000"
-        data-delay="2500">
+      <section className="intro">
       <Container>
           <Title title="spoj tradicije, kvaliteta i posvećenosti" />
           <p className="intro-content" >
             Preko 40 godina za vas kreiramo raznovrsne komade nakita. Sa velikom
             ljubavlju i pažnjom ulepšavamo sve vaše posebne trenutke...
           </p>
-          <AniLink fate to="/o-nama" className="btn">Naša priča</AniLink>
+          <Link fate to="/o-nama" className="btn">Naša priča</Link>
         </Container>
       </section>
     </div>

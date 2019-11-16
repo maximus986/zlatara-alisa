@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { Link } from "gatsby"
 
 const Category = ({category, className}) => {
   return (
     <div className={className}>
       <article className="category">
-        <AniLink fade to={`/${category.slug}`} className="category-link">
+        <Link to={`/${category.slug}`} className="category-link">
           <figure className="category-img-wrapper">
             <Img fluid={category.image.fluid} className="category-img" />
             </figure>
@@ -16,7 +16,7 @@ const Category = ({category, className}) => {
                 {category.category}
               </p>
             </div>
-        </AniLink>
+        </Link>
       </article>
     </div>
   );

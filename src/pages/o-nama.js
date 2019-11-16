@@ -12,19 +12,10 @@ const oNama = ({data}) => {
     <Layout>
       <SEO title="O nama" />
       <Hero img={data.aboutBg.childImageSharp.fluid}/>
-      <section className={styles.about}
-        data-aos="fade-up"
-        data-aos-once="true"
-        data-aos-offset="100"
-        data-aos-duration="1000"
-        data-delay="2500">
+      <section className={styles.about}>
         <Container>
           <Title title="ovo je naša priča" />
-          <article className={styles.aboutContent}
-            data-aos="fade-up"
-            data-aos-once="true"
-            data-aos-offset="300"
-            data-aos-delay="300">
+          <article className={styles.aboutContent}>
             <p className={styles.aboutContentItem}>
               Još davne 1972. godine Nuhi Husnijar osnovao je časovničarsko-zlatarsku radnju.
               I dan danas ovaj porodični posao obavljamo revnosno, predano i profesionalno.

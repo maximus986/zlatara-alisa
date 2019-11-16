@@ -35,20 +35,10 @@ const productTemplate = ({ data, className, pageContext: {
               `${image.fluid.src}`
             ] }
             />
-            <div className="product__img" onClick={ () => setToggler(!toggler) }
-              data-aos="fade-right"
-              data-aos-once="true"
-              data-aos-offset="0"
-              data-aos-delay="800"
-              data-aos-duration="600">
+            <div className="product__img" onClick={ () => setToggler(!toggler) }>
               <Img fluid={image.fluid}/>
             </div>
-            <div className="product-details"
-              data-aos="fade-left"
-              data-aos-once="true"
-              data-aos-offset="0"
-              data-aos-delay="800"
-              data-aos-duration="600">
+            <div className="product-details">
               <h2 className="product-details__title">{title}</h2>
               <p className="product-details__description">{description}</p>
             </div>

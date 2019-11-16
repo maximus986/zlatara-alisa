@@ -17,22 +17,12 @@ const kontakt = ({data}) => {
       <SEO title="Kontakt" />
       <Hero img={data.contactBg.childImageSharp.fluid}/>
       <div className={styles.container}>
-        <section className={styles.contact}
-          data-aos="fade-up"
-          data-aos-once="true"
-          data-aos-offset="100"
-          data-duration="1000"
-          data-delay="1000">
+        <section className={styles.contact}>
         <Title title="Kontaktirajte nas" className={styles.title}/>
         <article className={styles.contact__map}>
           <Map />
         </article>
-        <article className={styles.contact__details}
-            data-aos="fade-up"
-            data-aos-once="false"
-            data-aos-duration="1000"
-            data-aos-delay="800"
-            data-aos-offset="100">
+        <article className={styles.contact__details}>
           <div className={styles.contactItem}
             >
               <IoIosPhonePortrait className={styles.contactIcon}/>
