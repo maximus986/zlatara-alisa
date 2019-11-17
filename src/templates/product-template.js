@@ -106,7 +106,7 @@ export default styled(productTemplate)`
         }
         &__title {
           font-weight: 300;
-          margin-bottom: 1rem;
+          margin-bottom: 2rem;
           display: inline-block;
             &:after {
             content: "";
