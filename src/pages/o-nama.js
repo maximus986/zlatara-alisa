@@ -11,7 +11,7 @@ const oNama = ({data}) => {
   return (
     <Layout>
       <SEO title="O nama" />
-      <Hero img={data.aboutBg.childImageSharp.fluid}/>
+      <Hero img={data.aboutBg.childImageSharp.fluid} alt={data.aboutBg.name}/>
       <section className={styles.about}>
         <Container>
           <Title title="ovo je naša priča" />
@@ -47,6 +47,7 @@ export default oNama;
 export const query = graphql`
 query {
   aboutBg: file(relativePath: { eq: "bg-11.webp" }) {
+    name
     childImageSharp {
       fluid(maxWidth: 4160, quality: 90) {
         ...GatsbyImageSharpFluid

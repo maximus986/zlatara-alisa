@@ -14,7 +14,7 @@ export default function usluge ({data}) {
   return (
     <Layout>
       <SEO title="Usluge" />
-      <Hero img={data.servicesBg.childImageSharp.fluid}/>
+      <Hero img={data.servicesBg.childImageSharp.fluid} alt={data.servicesBg.name}/>
       <section className={styles.services}>
         <Container>
           <Title title="Naše usluge" />
@@ -55,6 +55,7 @@ export default function usluge ({data}) {
 export const query = graphql`
 {
   servicesBg: file(relativePath: {eq: "bg-33.webp"}) {
+    name
     childImageSharp {
       fluid(maxWidth: 4160, quality:90) {
         ...GatsbyImageSharpFluid

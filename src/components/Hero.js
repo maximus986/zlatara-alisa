@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import BackgroundImage from 'gatsby-background-image';
 
-const Hero = ({ img, className, children, home }) => {
+const Hero = ({ img, className, children, home, alt}) => {
   return (
-    <BackgroundImage className={className} fluid={img} home={home}>
+    <BackgroundImage className={className} fluid={img} home={home} alt={alt}>
       {children}
     </BackgroundImage>
   );

@@ -15,14 +15,14 @@ const Header = ({ className }) => {
   return(
     <header className={className}>
       <div className="header-wrapper">
-        <Link to="/" className="logo">
-          <img src={logo} alt="Logo" className="logo-icon"/>
+        <Link to="/" className="logo" title="logo">
+          <img src={logo} alt="Logo" className="logo-icon" />
         </Link>
         <nav className={
           isOpen ? `main-navbar show` : `main-navbar`
         }>
           <div className="main-navbar-header">
-            <Link to="/" className="main-navbar-header__logo">
+            <Link to="/" className="main-navbar-header__logo" title="logo">
               <img src={logo} alt="Logo" className="logo-icon"/>
             </Link>
               <IoIosClose className="main-navbar-header__close" onClick={toggleNav}/>
@@ -32,7 +32,7 @@ const Header = ({ className }) => {
             links.map((link, index) => {
               return (
                 <li key={index} className="main-nav__item">
-                  <Link to={link.path} className="main-nav__link" activeClassName="active">{link.text}</Link>
+                  <Link to={link.path} className="main-nav__link" activeClassName="active" title={link.text}>{link.text}</Link>
                 </li>
               );
             })

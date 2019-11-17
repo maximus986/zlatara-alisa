@@ -15,7 +15,7 @@ const kontakt = ({data}) => {
   return (
     <Layout>
       <SEO title="Kontakt" />
-      <Hero img={data.contactBg.childImageSharp.fluid}/>
+      <Hero img={data.contactBg.childImageSharp.fluid} alt={data.contactBg.name}/>
       <div className={styles.container}>
         <section className={styles.contact}>
         <Title title="Kontaktirajte nas" className={styles.title}/>
@@ -26,13 +26,13 @@ const kontakt = ({data}) => {
           <div className={styles.contactItem}
             >
               <IoIosPhonePortrait className={styles.contactIcon}/>
-              <a href="tel:+381112754118" className={styles.contactTel}>011/2754 118</a>
-              <a href="tel:+381646687634" className={styles.contactTel}>064/6687 634</a>
+              <a href="tel:+381112754118" className={styles.contactTel} title="kontakt telefon">011/2754 118</a>
+              <a href="tel:+381646687634" className={styles.contactTel} title="kontakt telefon">064/6687 634</a>
           </div>
           <div className={styles.contactItem}
             >
               <IoIosMail className={styles.contactIcon}/>
-            <a href="mailto:zlatara.alisa@gmail.com" className={styles.contactMail}>zlatara.alisa@gmail.com</a>
+            <a href="mailto:zlatara.alisa&#64;gmail.com" className={styles.contactMail} title="kontakt e-mail">zlatara.alisa&#64;gmail.com</a>
           </div>
           <div className={styles.contactItem}
             >
@@ -59,6 +59,7 @@ export default kontakt;
 export const query = graphql`
 {
   contactBg: file(relativePath: {eq: "bg-44.webp"}) {
+    name
     childImageSharp {
       fluid(maxWidth: 4160, quality:90) {
         ...GatsbyImageSharpFluid

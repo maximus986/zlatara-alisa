@@ -7,9 +7,9 @@ const Category = ({category, className}) => {
   return (
     <div className={className}>
       <article className="category">
-        <Link to={`/${category.slug}`} className="category-link">
+        <Link to={`/${category.slug}`} className="category-link" title={category.category}>
           <figure className="category-img-wrapper">
-            <Img fluid={category.image.fluid} className="category-img" />
+            <Img fluid={category.image.fluid} className="category-img" alt={category.category} />
             </figure>
             <div className="category-mask">
               <p className="category-title">

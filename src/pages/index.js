@@ -30,10 +30,10 @@ class IndexPage extends Component {
         <Slider {...settings}>
         {
           this.props.data.allFile.edges.map(({ node }, index) => {
-            return <Hero home="true" img={node.childImageSharp.fluid} key={index}>
+            return <Hero home="true" img={node.childImageSharp.fluid} key={index} alt={node.name}>
             <div className={styles.heroContentWrapper}>
               <h1 className={styles.heroContent}>tradicija i iskustvo</h1>
-              <Link to="/proizvodi" className="btn">Naša ponuda</Link>
+              <Link to="/proizvodi" className="btn" title="proizvodi">Naša ponuda</Link>
             </div>
             </Hero>
           })
@@ -53,6 +53,7 @@ export default (props) => {
   allFile(filter: {relativeDirectory: {eq: "Slider-images"}}) {
     edges {
       node {
+        name
         childImageSharp {
           fluid(maxWidth: 4160, quality: 90) {
             ...GatsbyImageSharpFluid

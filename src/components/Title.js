@@ -8,7 +8,7 @@ const Title = ({title, className}) => {
       <h2 className="title">
         {title}
         <figure className="title-img-wrapper">
-          <img src={diamond} alt="Diamond" className="title-img"/>
+          <img src={diamond} alt="Diamond" className="title-img" />
         </figure>
       </h2>
     </div>

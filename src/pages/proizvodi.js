@@ -13,7 +13,7 @@ export default function proizvodi({data}) {
   return (
     <Layout>
       <SEO title="Proizvodi" />
-      <Hero img={data.productsBg.childImageSharp.fluid} />
+      <Hero img={data.productsBg.childImageSharp.fluid} alt={data.productsBg.name}/>
       <Container>
       <div>
         <Title title="Naša ponuda" className={styles.title}/>
@@ -47,6 +47,7 @@ query {
     }
   }
   productsBg: file(relativePath: { eq: "bg-22.webp" }) {
+    name
     childImageSharp {
       fluid(maxWidth: 4160, quality: 90) {
         ...GatsbyImageSharpFluid

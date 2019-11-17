@@ -7,12 +7,12 @@ const Product = ({product, className}) => {
   return (
     <div className={className}>
     <article className="product">
-      <Link to={`/${product.slug}`} className="product-link">
+      <Link to={`/${product.slug}`} className="product-link" title={product.title}>
         <h5 className="product-title">
           {product.title}
         </h5>
         <figure className="product-img-wrapper">
-          <Img fluid={product.image.fluid} className="product-img" />
+          <Img fluid={product.image.fluid} className="product-img" alt={product.title}/>
         </figure>
         <p className="product-description">
           {product.description}
