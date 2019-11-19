@@ -8,14 +8,14 @@ module.exports = {
     description: `Specijalizovana radnja za prodaju nakita od zlata i srebra, časovnika, kao i popravku časovnika i nakita.`,
     author: `Aleksandar Maksimovic`,
     keywords: `Zlatara, nakit, prstenje, burme, verenicko prstenje, mindjuse, privesci, narukvice, ogrlice, satovi, popravka satova, popravka nakita, popravka časovnika, servis`,
-    siteUrl: `https://test-zlatara-alisa.netlify.com/`
+    siteUrl: `http://zlatara-alisa.rs/`
   },
   plugins: [
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: `https://test-zlatara-alisa.netlify.com/`,
-        sitemap: `https://test-zlatara-alisa.netlify.com/sitemap.xml`,
+        host: `http://zlatara-alisa.rs/`,
+        sitemap: `http://zlatara-alisa.rs/sitemap.xml`,
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
