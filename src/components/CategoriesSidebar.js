@@ -33,7 +33,7 @@ const CategoriesSidebar = ({className}) => {
           categories.map(category => {
             return (
             <li className="sidebar-list__item" key={category.node.contentful_id}>
-              <Link to={`/${category.node.slug}`} className="sidebar-list__item-link" activeClassName="active" title={category.node.category}>
+              <Link to={`/${category.node.slug}`} className="sidebar-list__item-link" activeClassName="active">
                 <h5 className="sidebar-list__item-link-title">{category.node.category}</h5>
               </Link>
             </li>

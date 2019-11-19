@@ -17,7 +17,7 @@ class NotFoundPage extends Component {
             <Title title="Stranica ne postoji" />
             <div className={styles.notFoundInfo}>
               <h3 className={styles.title}>Zahtevana stranica nije pronađena.</h3>
-              <Link to="/" className={styles.link} title="početna">
+              <Link to="/" className={styles.link}>
                 <span className={styles.linkText}>Možete se vratiti na početnu starnu.</span>
               </Link>
               <p className={styles.teaser}>Ili bacite pogled na naše najprodavanije i najnovije proizvode.</p>

@@ -14,7 +14,7 @@ const Intro = ({className}) => {
             Preko 40 godina za vas kreiramo raznovrsne komade nakita. Sa velikom
             ljubavlju i pažnjom ulepšavamo sve vaše posebne trenutke...
           </p>
-          <Link fate to="/o-nama" className="btn" title="o-nama">Naša priča</Link>
+          <Link fate to="/o-nama" className="btn">Naša priča</Link>
         </Container>
       </section>
     </div>

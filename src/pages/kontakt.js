@@ -26,13 +26,13 @@ const kontakt = ({data}) => {
           <div className={styles.contactItem}
             >
               <IoIosPhonePortrait className={styles.contactIcon}/>
-              <a href="tel:+381112754118" className={styles.contactTel} title="kontakt telefon">011/2754 118</a>
-              <a href="tel:+381646687634" className={styles.contactTel} title="kontakt telefon">064/6687 634</a>
+              <a href="tel:+381112754118" className={styles.contactTel}>011/2754 118</a>
+              <a href="tel:+381646687634" className={styles.contactTel}>064/6687 634</a>
           </div>
           <div className={styles.contactItem}
             >
               <IoIosMail className={styles.contactIcon}/>
-            <a href="mailto:zlatara.alisa&#64;gmail.com" className={styles.contactMail} title="kontakt e-mail">zlatara.alisa&#64;gmail.com</a>
+            <a href="mailto:zlatara.alisa&#64;gmail.com" className={styles.contactMail}>zlatara.alisa&#64;gmail.com</a>
           </div>
           <div className={styles.contactItem}
             >
